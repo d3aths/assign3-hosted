@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-functions.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-messaging.js"></script>  
+    </head>
+    <body>
+        <script src="index.js" async defer></script>
+
+<header>
+    <div class="container">
+        
+        <div id="logo"><img src="logo.png"/></div>
+           
+        <nav>
+            <span id="accSt">Acc Status:</span>
+            <span id="quickstart-sign-in-status">Unknown</span>
+            <button type="button" class="btn btn-primary btn-sm" id="loginStatus" style="margin-left:15px" onclick="document.location='/pages/login.html'">Login</button>
+            <a class="active" href="#">Home</a>
+            <a href="/pages/products.html">Products</a>
+            <a href="/pages/shipping.html">FAQ</a>
+        </nav>
+    
+    </div>
+</header>
+<main>
+    
+		
+<section class="blank">
+<div class="container">
+    
+    <h2>Welcome</h2>
+        <p>We provide handmade custom artisan keycaps for mechanical keyboards, unique creations that you can’t find mass produced.</p>
+            <p>These individualized custom designs are uniquely artistic as well as desirable to the eye. They not only serve as a novelty design on your keyboard, but functionally as well.</p>
+            
+        <p class="button"><a href="#work"><span>Our work</span></a></p><p class="button"><a href="/pages/products.html"><span>Product Gallery</span></a></p>
+</div>
+</section>
+<section class="color">
+<div class="container">
+    <a name="work"></a>
+    <h2>What we do</h2>
+        <div class="three 1">
+            <h3>Customer Focus</h3>
+            <img src="https://mrapks.com/wp-content/uploads/2019/12/icon-3.png" width="40%" height="40%" style="border-radius:50%" />
+            <p>We cater our designs to match the demands of those in the gaming and streaming community, one of the most popular items to customize are keyboards. </p>
+        </div>
+        <div class="three 2">
+            <h3>Trusted Brand</h3>
+            <img src="https://st3.depositphotos.com/1915171/32837/v/450/depositphotos_328375628-stock-illustration-check-mark-line-icon-accepted.jpg" width="40%" height="40%" style="border-radius:50%" />
+            <p>The execution of our brand is something we hold high on our priorities, our brand is seen for its unique services and ability to provide custom and quality craftsmanship.</p>
+        </div>
+        <div class="three 3">
+            <h3>Quality Design</h3>
+            <img src="https://i.ibb.co/JsT6zp8/rsz-glowing-neon-award-medal-with-star-and-ribbon-icon-vector-28967834-1.png" width="40%" height="40%" style="border-radius:50%" />
+            <p>Our keycaps are created with the highest quality thermoplastics, combined with our artist grade resin material used to hand paint our designs.</p>
+        </div>
+        
+    <dl class="accordion">
+            <dt><a href="">Illidan the Betrayer</a></dt>
+            <dd>This Novelty Illidan inspired resin hand-painted keycap from World of Warcraft is the product you didn't think you need, but once you have it, something you won't want to live without.<br>
+                <br><i>Betrayer... In truth, it was I who was betrayed. Still, I am hunted. Still, I am hated. Now, my blind eyes see what others cannot: that sometimes the hand of fate must be forced! Now go forth... unleash the tides of Doom... Upon all those...who would oppose us.<br>
+                    - Illidan Stormrage</i></dd>
+
+            <dt><a href="">Frostmourne Runeblade</a></dt>
+            <dd>Hand crafted accursed runeblade, Frostmourne keycap is a perfect addition to your other gaming related keys. Will you take up the blade and bend it's powers to your will, or let Frostmourne's whispers into your soul?<br>
+                <br><i>Whomsoever takes up this blade shall wield power eternal. Just as the blade rends flesh, so must power scar the spirit.</i></dd>
+
+            <dt><a href="">Mystic Dragon</a></dt>
+            <dd>The fierce dragon stands tall in front of their treasure, all hollow and holy after fighting their exquistite battle to protect the gems. Now on the keyboard, it's a sacred relief telling the story of epic fight and the greatest mythical creature of all. From resin and colours somes the artisan keycap that will raise the standard of your keyboard.</dd>
+            
+            <dt><a href="">Gengar - Pokemon</a></dt>
+            <dd>Pokémon fans couldn’t possibly ask for better keyboard accessories than this Pokémon keycap. About the only thing better would be, of course, real Pokémon. The little guys are encased in something that has the feel of an old Gameboy and then cast in resin for durability. The careful design of the cap means that it should fit in on just about any keyboard you attach it to.</dd>
+                  
+    </dl>
+    
+<aside>
+    <h2>New Featured Products</h2>
+    <input type="radio" name="slide" style="display:none" id="img-1" checked>
+    <input type="radio" name="slide" style="display:none" id="img-2">
+    <input type="radio" name="slide" style="display:none" id="img-3">
+    <input type="radio" name="slide" style="display:none" id="img-4">
+  
+    <div class="img-box">
+        <img id="four" src="https://media.karousell.com/media/photos/products/2020/6/12/scraft_artisan_pokemon_resin_k_1591948920_9887bf4b_progressive" style="transform: scale(1.2);">
+        <img id="three" src="https://www.dwarf-factory.com/wp-content/uploads/2020/05/Mystic-Dragon-V2-Concept-Crop-4-1540x1540.jpg" style="transform: scale(1.2);">
+        <img id="two" src="https://ae01.alicdn.com/kf/HTB1iQcBXULrK1Rjy0Fjq6zYXFXaS/For-Dota-Frostmourne-Sword-Keycaps-ESC-OEM-Backlight-3D-Backlit-Aluminum-Metal-Keycaps-for-Mechanical-Gaming.jpg_q50.jpg" style="transform: scale(1.2);">
+        <img id="one" src="https://img.alicdn.com/imgextra/i2/1713761720/O1CN01FjPm9s1OZnnBht2ZC_!!1713761720.jpg" style="transform: scale(1.2);">
+    </div>
+    <div class="nav">
+        <label for="img-1"><div id="dot-1" class="radio"></div></label>
+        <label for="img-2"><div id="dot-2" class="radio"></div></label>
+        <label for="img-3"><div id="dot-3" class="radio"></div></label>
+        <label for="img-4"><div id="dot-4" class="radio"></div></label>
+    </div>
+        </aside>
+
+                <p class="button"><a href="#contact"><span>Are you an artisan looking to create for us? <br />Contact us now!<br /><img src="http://i328.photobucket.com/albums/l341/JE_N_DA/contact_envelope_zpsnjuqhq9k.png" /></span></a></p>
+    </div>
+</section>
+<section class="blank">
+    <div class="container">
+        <h2>Why we are different</h2>
+        <p>We make sure to create our keycaps out of the highest quality thermoplastics, and combined with our artist grade resin material used to hand paint our designs, we can guarantee our customers of both quality in hardware and design. This is something that mass produced products often lack, and this factor increases our value proposition in the marketplace overall.
+        </p>
+    </div>
+</section>
+
+    </div>
+</section>
+				
+	
+		
+	</main>
+	<footer>
+						
+<div class="container">		
+            <div class="form-div">
+                <form class="form" method="post" action='contact-form-proc.php'>
+                    
+                    <p class="name">
+                        
+                        <input type="text" name="name" id="name" class="feedback-input" placeholder="Name" />
+                    </p>
+                    <p class="email"> 
+                        
+                        <input type="text" name="email" id="email" class="feedback-input" placeholder="E-mail" /> 
+                    </p>    
+                    <p class="text"> 
+                        
+                        <textarea name="text" id="comment" class="feedback-input" placeholder="Comment"></textarea> 
+                    </p>   
+                    <div class="submit"> 
+                        <input type="submit" value="SEND" id="submitbtn"/> 
+                    </div>
+                </div>
+            </form>
+					
+        <div class="contact">
+            <a name="contact"></a>
+            <h2>Drop us a line!</h2>
+            <p>Message us here with any enquiries or ordering questions you have. We aim to respond within 24 hours.</p>
+            <h3>Are you a sponsored streamer or influencer?<br>Contact us today to discuss being an ambassador of our brand!</h3>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><img class="three" src="http://i328.photobucket.com/albums/l341/JE_N_DA/facebook_zps1n4vgbms.png" /></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank"><img class="three" src="http://i328.photobucket.com/albums/l341/JE_N_DA/twitter_zpsndr1r0mm.png" /></a>
+                    <a href="http://www.instagram.com/" target="_blank"><img class="three" src="http://i328.photobucket.com/albums/l341/JE_N_DA/instagram_zpskb6d8rel.png" /></a>
+                    
+                </div>
+        </div>
+    <p class="goodbye"><i>&copy Fantasy Caps 2020</i></p>
+</div>
+    </footer>
+</body>
+</html>
