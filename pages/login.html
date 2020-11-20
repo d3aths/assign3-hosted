@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-functions.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-messaging.js"></script>  
+        <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+              <div id="logo"><img src="../logo.png"/></div>
+ 
+              <nav>
+                <span id="accSt">Acc Status:</span>
+                <span id="quickstart-sign-in-status">Unknown</span>
+                <button type="button" class="btn btn-primary btn-sm" id="loginStatus" style="margin-left:15px" onclick="document.location='#'">Login</button>
+                <a href="../index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="shipping.html">FAQ</a>   
+              </nav>
+            
+            </div>
+          </header>
+
+<main>
+ <br>
+ <div class="login-container">
+    <div class="login-container-left">
+        <div>
+        <form action="" class="form-login" name="loginForm">
+            <ul class="login-nav">
+                <li class="login-nav_item active">
+                    <a href="#" class="active" id="login-box-link">Login / Register</a>
+                </li>
+            </ul>
+            <label for="email" class="login_label">
+                Email
+            </label>
+            <input id="email" name="email" class="login_input" type="text" />
+            <label for="password" class="login_label">
+                Password
+            </label>
+            <input id="password" name="password" class="login_input" type="password" />
+            <label for="login-sign-up" class="login_label--checkbox">
+                <input id="login-sign-up" type="checkbox" class="login_input--checkbox" />
+                Keep me Signed in
+            </label>
+            <div class="btndisplay">
+            <button class="login_submit" id="quickstart-sign-in" name="signin">Log in</button><button class="login_submit" id="quickstart-sign-up" name="signup">Sign up</button></div>
+               <a href="#" class="login_forgot" id="quickstart-password-reset" name="verify-email">Forgot Password?</a>
+               <a href="#" class="login_forgot" disabled id="quickstart-verify-email" name="verify-email">Resend Email Verification</a>
+        </form>
+    </div>
+    </div>
+    </div>
+    <br>
+
+
+</main>
+<br><br>
+
+        <script src="/pages/login.js" async defer></script>
+    </body>
+</html>

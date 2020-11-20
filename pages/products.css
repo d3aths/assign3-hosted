@@ -1,0 +1,541 @@
+/*--------Reset based on work by Eric Meyer: https://meyerweb.com/eric/tools/css/reset/index.html--------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a img {
+  border: none; }
+ /*--------End of reset--------*/
+ 
+/*--------General----------*/
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+body {
+	background:#232e44;
+	color: #505050;
+	font-family: "Alegreya Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.8; 
+}
+h1, h2, h3, h4, h5, h6{
+	text-align:center;
+    padding-bottom:4%;
+    font-family: "Alegreya Sans SC";
+}
+h2{
+	font-size:1.8em;
+    font-weight:700;
+    font-family: 'Alegreya Sans SC';
+    color: white;
+}
+p{
+	font-size:100%;
+	text-align:justify;
+	clear:both;
+}
+dd span{
+	font-weight:600;
+	color:#0c59cf;
+}
+a{
+	text-decoration:none;
+	color:#0c59cf;
+	font-weight:600;
+}
+/*--------End of General--------*/
+
+/*--------Header--------*/
+header{
+	width:100%;
+	margin:0 auto;
+	height:75px;
+	background:rgb(37, 37, 37);
+	z-index: 999;
+	position:fixed;
+	left:0;
+	top:0;
+	opacity:1;
+}
+header nav{
+	float:right;
+	display:inline-block;
+}
+header nav a{
+	color:#000;
+	padding:0 1em;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+	
+	
+}
+header nav a.active{
+	color:#0c59cf;
+	font-weight:700;
+}
+
+header nav a:hover{
+	color:#0c59cf;
+	font-weight:700;
+}
+
+#logo img{
+	float:left;
+    width:15%;	
+    margin-top: -10px;
+}
+
+#accSt {
+	font-size: 12px;
+	display: flex;
+	margin-top: -20px;
+}
+
+.btn:not(.btn-link) {
+	padding: 5px 8px;
+	display:inline-block;
+	border-radius: 5%;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+	cursor:pointer;
+}
+
+.btn:hover:not(.btn-link) {
+  background:#4343473a;
+  color: white;
+} 
+
+/*removes the silly outline that comes in bootstrap from around elements*/
+:active, :focus, button:active, button:focus{
+  outline: none;
+  border: none;
+  -moz-outline-style: none;
+}
+a.add-to-cart.btn.btn-link:focus {
+  box-shadow: none;
+}
+
+
+/*-------End of header------*/
+
+/*-------Content-----------*/
+p.button{
+	text-align:center;
+	padding-top:4em;
+}
+p.button a{
+	color:#fff;
+}
+p.button span{
+	padding: 2em 3em;
+	display:inline-block;
+	margin:2em auto 0 auto;
+	font-size:1.2em;
+	border:#fff solid 1px;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+	cursor:pointer;
+}
+p.button span:hover{
+	background:#212b33;
+}
+section {
+	padding: 60px 0;
+}
+section p {
+    margin-bottom: 30px;
+}
+section p:last-child {
+    margin-bottom: 0; 
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+
+}
+section.color{
+	background:rgb(30, 42, 63);
+	color:#fff;
+	
+}
+section.blank:not(.container){
+    background: linear-gradient(rgba(126, 126, 126, 0.4), rgba(126, 126, 126, 0.4)), url("https://storage-asset.msi.com/event/2019/mystic-light-rgb-pc/images/partner01.jpg")no-repeat fixed;
+	background-size:cover;
+	color:#fff;
+	overflow:hidden;
+    padding-top:105px;
+}
+
+section.blank .container{
+	float:right;
+	width:40%;
+	background:rgb(53,53,53);
+	opacity:0.9;
+	padding:3em 2em;
+    margin-right:10%;	
+    border: 1px solid black;
+    filter: drop-shadow(1px 1px 5px black);
+}
+section.blank .container p.button{
+	display:inline;
+	padding-left:2%;
+	margin:0;
+}
+section.blank .container p.button span:hover{
+	background:#131313;
+}
+.three{
+	width:31.3%;
+	float:left;
+	padding:2% 2%;
+	margin:0 1%;
+	margin-bottom:6%;
+	text-align:center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+		
+}
+section.color .three{
+	height:350px;
+	border:#000 solid 1px;
+	cursor:pointer;
+}
+.three p{
+	text-align:center;
+	display:none
+}
+section.color .three:hover{
+	background:#30394d;
+	
+}
+aside{
+	margin:2% auto;
+	width:35%;
+	padding-left:2%;
+	float:left;
+	
+}
+aside img{
+	width:80%;
+	text-align:center;
+	margin-left:10%;
+}
+/*-----------End of Content-------*/
+
+/*-----------Accordion------------*/
+
+.accordion {
+	
+    margin:2% auto;
+	padding:1%;
+	padding-right:3%;
+	width:60%;
+	float:left;
+	border-right:#000 solid 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+      
+.accordion dd {
+    padding: 10px;
+
+}
+      
+.accordion dt a,.accordion dd a {
+    display: block;
+    color: #000;
+    font-weight: bold;
+}
+      
+.accordion dd {
+    margin: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    font-size: 1rem;
+	text-align:justify;
+}
+.accordion dt{
+	margin:10px;
+	display: list-item;
+    list-style-type: decimal;
+	color:#000;
+}
+
+
+/*------------Footer-------------*/
+footer{
+	width:100%;
+	margin:0 auto;
+	background:rgb(45,45,45);
+	color:#fff;
+	overflow:hidden;
+	padding-bottom:2%;
+}
+.contact{
+	width:46%;
+	float:left;
+}
+.contact .social{
+	width:40%;
+	padding-top:3%;
+	border-top:#fff solid 1px;
+	
+}
+.contact .social img{
+	padding-right:3%;
+}
+.contact p{
+	padding-bottom:50px;
+	
+}
+p.goodbye{
+	clear:both;
+	text-align:center;
+	padding-top:2%;
+}
+
+/*----------End of Footer-------------*/
+
+
+
+
+/*START OF CONTENT
+.
+.
+*/
+
+/*containers for product grid*/
+.productbox {
+  width: 250px;
+  height: 200px;
+  border: 1px solid black;
+  filter: drop-shadow(1px 1px 5px black);
+  margin: 1.5em;
+  display: inline-block;
+}
+.productbox p {
+  color: white;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  vertical-align: super;
+}
+
+.productbox:hover {
+  filter: drop-shadow(1px 1px 10px #0c59cf);
+}
+
+.productbox img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
+#cartico:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  transition: 1s ease;
+}
+
+/*creates uneven columns for search and grid*/
+.column {
+  float: left;
+  text-align: center;
+}
+.left {
+  width: 20%;
+  text-align: left;
+  justify-content: center;
+}
+
+.right {
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #141414;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+/*styles search box a lil bit*/
+.column input[type=text] {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  border: none;
+  font-size: 15px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+  background-color: rgb(34, 46, 68);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Alegreya Sans SC';
+}
+
+/* Style the collapsible content, hidden by default */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} 
+
+/*changes icons to show whether open or closed*/
+.collapsible:after {
+  content: '\25BE';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 45px;
+}
+
+.collapsible.active:after {
+  content: "\25B4";
+}
+
+/* The container */
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+}
+
+/* Hide the browser's default checkbox */
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container2 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container2 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*gives cart icon a green color*/
+#cartico {
+  filter: opacity(0.3) drop-shadow(0 0 0 rgb(2, 255, 2));
+}

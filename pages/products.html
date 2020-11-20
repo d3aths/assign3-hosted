@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Product Catalog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-functions.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-messaging.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="products.css">
+      </head>
+    <body>
+        <script src="/pages/products.js" async defer></script>
+<header>
+  <div class="container">
+    <div id="logo"><img src="../logo.png"/></div>
+    
+    
+    
+    <nav>
+      <span id="accSt">Acc Status:</span>
+      <span id="quickstart-sign-in-status">Unknown</span>
+      <button type="button" class="btn btn-primary btn-sm" id="loginStatus" style="margin-left:15px" onclick="document.location='login.html'">Login</button>
+      <a href="../index.html">Home</a>
+      <a class="active" href="#">Products</a>
+      <a href="shipping.html">FAQ</a>
+      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#cart" style="background-color: rgba(206, 206, 206, 0.123);">Cart (<span class="total-count"></span>)</button>
+      <button class="clear-cart btn btn-outline-danger btn-sm" style="background-color: rgba(206, 206, 206, 0.123);">Clear Cart</button>
+      
+    </nav>
+  
+  </div>
+</header>
+    <!-- START OF CONTENT-->
+    <main>
+      <br><br><br>
+    <div class="row">
+      <div class="column left"><br>
+        <input type="text" style="font-family:FontAwesome;width:200px;" placeholder="&#xf002 Search..">
+      <br>
+      <p><h2>Filter Products</h2></p>
+      <button class="collapsible"> Price</button>
+      <div class="content">
+        <p><label class="container2">Under $20
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">$20 - 40
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">$40 - 60
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">$60 - 100
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">$100+
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label></p>
+      </div>
+      <button class="collapsible"> Colors</button>
+      <div class="content">
+        <p><label class="container2">RGB
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">White
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">Blue
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">Red
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">Green
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">Purple
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">Yellow
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container2">Pink
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label></p>
+      </div> 
+      </div>
+      <div class="column right" style="filter: drop-shadow(1px 1px 5px black);">
+    <div class="productbox"><img src="https://www.jellykey.com/wp-content/uploads/19_1-scaled.jpg" width="250px" height="200px"><p>Dragons of Eden</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $64.00 </p> <a href="#" data-name="Dragons&nbsp;of&nbsp;Eden" data-price="64" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://www.jellykey.com/wp-content/uploads/rehabilitation-xanh-19.jpg" width="250px" height="200px"><p>Rehabilitation of Lost Cities</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $55.00 </p> <a href="#" data-name="Rehabilitation&nbsp;of&nbsp;Lost&nbsp;Cities" data-price="55" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://www.jellykey.com/wp-content/uploads/A7_Jelly-Key-Zend-Pond-keycaps749.jpg" width="250px" height="200px"><p>Zen Pond II - A story of everything</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $65.00 </p> <a href="#" data-name="Zen&nbsp;Pond" data-price="65" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://i.ibb.co/XxNNRFz/image.png" width="250px" height="200px"><p>Cosmos Series - Celestial Sphere</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $53.00 </p> <a href="#" data-name="Celestial&nbsp;Sphere" data-price="53" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://i.ibb.co/jkkWnBH/image.png" width="250px" height="200px"><p>Artifact Series - Ethereal Reign</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $70.00 </p> <a href="#" data-name="Ethereal&nbsp;Reign" data-price="70" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://i.ibb.co/YBJ1Nqw/image.png" width="250px" height="200px"><p>Confectionary Woods</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $62.00 </p> <a href="#" data-name="Confectionary&nbsp;Woods" data-price="62" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://www.jellykey.com/wp-content/uploads/csm/Jelly_Key_artisan_photo_0042-scaled.jpg" width="250px" height="200px"><p>Halloween Token</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $45.00 </p> <a href="#" data-name="Halloween" data-price="45" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://i.ibb.co/Bsv2yyt/image.png" width="250px" height="200px"><p>Mystical Dragon - Night Fury</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $59.00 </p> <a href="#" data-name="Mystical&nbsp;Dragon" data-price="59" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+    <div class="productbox"><img src="https://i.ibb.co/Qvy6QrD/image.png" width="250px" height="200px"><p>Gengar - Pokemon</p>
+      <br><img style="margin-right: 10px" src="https://i.ibb.co/S3kQHkR/price-tag-24.png"> <p> $75.00 </p> <a href="#" data-name="Gengar" data-price="75" class="add-to-cart btn btn-link"><img id="cartico" style="margin-left: 45px" src="https://i.ibb.co/hM6CpfK/add-shopping-cart-white-24x24.png"></a></div>
+      <br>
+    </div>
+  </div>
+  </main>
+  <br>
+   <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color:black;">Close</button>
+        <button type="button" class="btn btn-primary" style="color:black;">Order now</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </body>
+</html>
