@@ -143,7 +143,7 @@ function signoutBtn() {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
         var providerData = user.providerData;
-        window.location ='../index.html' //redirects user to homepage after logging in
+        window.location ='index.html' //redirects user to homepage after logging in
         // [START_EXCLUDE]
         document.getElementById('quickstart-sign-in-status').textContent = `${user.email}`;
         document.getElementById('quickstart-sign-in').textContent = 'Sign out';
